@@ -8,8 +8,8 @@ import {
   createTeamsMeetingWithSpecificFormat,
   createPersonalTeamsMeeting,
   detectAccountType 
-} from "../GraphService";
-import { useAppContext } from "../AppContext";
+} from "../../GraphService";
+import { useAppContext } from "../../AppContext";
 
 // Common timezones with UTC offsets
 const TIMEZONES = [

@@ -37,8 +37,11 @@ function App({ pca }: AppProps) {
                 <Route path="/TeamsMeeting"
                 element={
                   <TeamsMeeting />
-                } />             
-            </Routes>
+                } />    
+                  <Route path="/TeamsMeeting"
+                element={
+                  <TeamsMeeting />
+                } />       </Routes>
           </Container>
         </Router>
       </ProvideAppContext>
