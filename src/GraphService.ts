@@ -1,5 +1,3 @@
-  // Copyright (c) Microsoft Corporation.
-  // Licensed under the MIT License.
 
   // <GetUserSnippet>
   import { Client, GraphRequestOptions, PageCollection, PageIterator } from '@microsoft/microsoft-graph-client';
@@ -123,7 +121,8 @@ export async function createValidTeamsMeeting(
   start: Date,
   end: Date,
   attendeeEmails: string[] = [],
-  body: string = ""
+  body: string = "",
+  timezone: string = "UTC"
 ) {
   ensureClient(authProvider);
 
@@ -439,7 +438,8 @@ export async function createTeamsMeetingWithSpecificFormat(
   start: Date,
   end: Date,
   attendeeEmails: string[] = [],
-  body: string = ""
+  body: string = "",
+  timezone: string
 ) {
   const graphClient = Client.initWithMiddleware({ authProvider });
   
@@ -711,13 +711,7 @@ export async function createTeamsMeetingWithSpecificFormat(
 
 // Function to specifically target personal Teams meetings
 export async function createPersonalTeamsMeeting(
-  authProvider: AuthCodeMSALBrowserAuthenticationProvider,
-  subject: string,
-  start: Date,
-  end: Date,
-  attendeeEmails: string[] = [],
-  body: string = ""
-) {
+authProvider: AuthCodeMSALBrowserAuthenticationProvider, subject: string, start: Date, end: Date, attendeeEmails: string[] = [], body: string = "", timezone: string) {
   const graphClient = Client.initWithMiddleware({ authProvider });
   
   console.log("Attempting to create personal Teams meeting (teams.live.com format)...");

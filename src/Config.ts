@@ -1,8 +1,6 @@
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT License.
 
 const config = {
-  appId: 'd1cb90c1-529b-42d6-b19f-5b403cc47bce',
+  appId: 'e01235ac-3f91-4685-8653-1ca3dae4b93f',
   redirectUri: 'http://localhost:3000/api/callback',
   scopes: [
     'User.Read',

@@ -1,3 +1,5 @@
+"use client"
+
 // Enhanced TeamsMeeting.tsx with teams.live.com URL targeting and UTC timezone selection
 import { useState, useEffect } from "react";
 import { AuthenticatedTemplate } from "@azure/msal-react";
@@ -6,8 +8,8 @@ import {
   createTeamsMeetingWithSpecificFormat,
   createPersonalTeamsMeeting,
   detectAccountType 
-} from "./GraphService";
-import { useAppContext } from "./AppContext";
+} from "../GraphService";
+import { useAppContext } from "../welcome/AppContext";
 
 // Common timezones with UTC offsets
 const TIMEZONES = [
