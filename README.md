@@ -1,4 +1,3 @@
-# outlook-calendar-integration-react-scheduler
 
 ## Prerequisites
 
